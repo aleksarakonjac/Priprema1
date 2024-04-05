@@ -1,0 +1,41 @@
+#forma{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 20px 10px 20px 10px;
+}
+
+.forma-kolona{
+    display: flex;
+    flex-direction: column;
+}
+#kolona-leva{
+    padding-right: 70px;
+}
+.forma-stavka{
+    padding-bottom: 25px;
+}
+label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+#btn-posalji{
+    transition-duration: 0.3s;
+    background-color: rgb(28, 140, 245);
+    font-weight: 600;
+    border-width: 0;
+    border-radius: 5px;
+    padding: 10px 0px 10px 0px;
+    width: 100%;
+    color: azure;
+    
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif,
+}
+#btn-posalji:hover{
+    background-color: rgb(28, 89, 146);
+    transition-duration: 0.3s;
+}
+#datum{
+    font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,13 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css">
+    <title>Forma za unos izlaska na ispit</title>
+  </head>
+  <body>
+    <div id="forma-cela">
+      <form action="" id="forma">
+        <div class="forma-kolona" id="kolona-leva">
+          <div class="forma-stavka">
+            <label for="ocena">Ocena: </label>
+            <input type="number" name="ocena" id="ocena" />
+          </div>
+          <div class="forma-stavka">
+            <label for="brojindeksa">Broj indeksa: </label>
+            <input type="text" name="brojindeksa" id="brojindeksa" placeholder="2022/0010"/>
+          </div>
+          <div class="forma-stavka">
+            <label for="rednibroj">Redni broj izlaska na ispit: </label>
+            <select name="rednibroj" id="rednibroj">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+        </div>
+        <div class="forma-kolona">
+          <div class="forma-stavka">
+            <label for="datum">Datum izlaska na ispit: </label>
+            <input type="date" name="datum" id="datum">
+          </div>
+          <div class="forma-stavka">
+            <label for="rok">Rok: </label>
+            <input type="radio" name="rok" id="januar" value="januar">
+            <label for="januar"> Januar </label>
+            <input type="radio" name="rok" id="april" value="april">
+            <label for="april"> April </label>
+            <input type="radio" name="rok" id="jun" value="jun">
+            <label for="jun"> Jun </label>
+            <input type="radio" name="rok" id="septembar" value="septembar">
+            <label for="septembar"> Septembar </label>
+          </div>
+          <div class="forma-stavka">
+            <input type="checkbox" id="polozio">
+            <label for="polozio"> Polozio/la</label>
+          </div>
+          <button id="btn-posalji" type="submit">Posalji</button>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
