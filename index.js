@@ -24,28 +24,34 @@ function podaciForme() {
   });
 
   if (ocena < 5 || ocena > 10) {
-    $("#ocena")
-      .parent()
-      .after(`<p class="poruka-greske">* Ocena mora biti izmedju 5 i 10</p>`);
+    document
+      .getElementById("ocena")
+      .parentElement.insertAdjacentHTML(
+        "afterend",
+        `<p class="poruka-greske">* Ocena mora biti izmedju 5 i 10</p>`
+      );
   }
   if (!proveriIndeks(brojindeksa)) {
-    $("#brojindeksa")
-      .parent()
-      .after(
+    document
+      .getElementById("brojindeksa")
+      .parentElement.insertAdjacentHTML(
+        "afterend",
         `<p class="poruka-greske">* Indeks mora biti u formatu xxxx/yyyy. <br> Godina mora biti od 2000, indeks od 0001-1000</p>`
       );
   }
   if (ocena >= 6 && ocena <= 10 && !polozio) {
-    $("#polozio")
-      .parent()
-      .after(
+    document
+      .getElementById("polozio")
+      .parentElement.insertAdjacentHTML(
+        "afterend",
         `<p class="poruka-greske">* Polje mora biti oznaceno, posto je ocena u opsegu 6-10</p>`
       );
   }
   if (ocena == 5 && polozio) {
-    $("#polozio")
-      .parent()
-      .after(
+    document
+      .getElementById("polozio")
+      .parentElement.insertAdjacentHTML(
+        "afterend",
         `<p class="poruka-greske">* Polje ne moze biti oznaceno, posto je ocena 5</p>`
       );
   }
